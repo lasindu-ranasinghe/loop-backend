@@ -40,7 +40,7 @@ app.use("/explore", exploreRoutes);
 
 app.use("/auth", auth);
 app.use("/email", email);
-app.use("/messege", messegeRoutes);
+app.use("/chat", messegeRoutes);
 app.use("/payment", paymentRoutes);
 
 console.log(`BACKEND SERVER STARTED IN ${config.get("Name")} ENVIRONMENT`);
