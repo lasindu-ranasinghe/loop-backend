@@ -18,7 +18,6 @@ const cors = require("cors");
 const connectDB = require("./config/database");
 const updatePasswords = require("./config/password");
 const config = require("config");
-require("./config/prod")(app);
 
 // necessary routes
 const userRoutes = require("./routes/userRoutes");
@@ -36,7 +35,7 @@ const paymentRoutes = require("./routes/paymentRoutes");
 
 // instantiating an ExpressJS app
 const app = express();
-
+require("./config/prod")(app);
 // set allowed origins for CORS
 const allowedOrigins = ["http://localhost:3000", "http://localhost:8000"];
 
@@ -103,6 +102,10 @@ const port = process.env.PORT;
 // function to log 'Listening to Port <port-number>' to the console
 // after listening begins:
 
-app.listen(port, () => console.log(`Listening to Port ${port}`));
+connectDB().then(() => {
+  app.listen(port, () => {
+    console.log("listening for requests");
+  });
+});
 
 module.exports = app;
