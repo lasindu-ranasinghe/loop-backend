@@ -67,7 +67,7 @@ const sendMessage = asyncHandler(async (req, res) => {
     const sanitizedJson = removeInvisibleChars(inputJson);
 
     const response = await axios.post(
-      "https://loop-chatbot-caramel-labs.koyeb.app/chatbot/",
+      "https://loop-chatbot-caramel-labs.koyeb.app/chat-with-memory/",
       sanitizedJson,
       {
         headers: {
