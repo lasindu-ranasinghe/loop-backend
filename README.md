@@ -1,6 +1,7 @@
 # Loop: University Social Media Platform Backend
 
 Welcome to the backend repository of Loop, a social media platform designed exclusively for university students. Loop facilitates connections among undergraduates and enables societies to promote their events and activities within the university community.
+
 ![width-800](https://github.com/lasindu-ranasinghe/loop-backend/assets/116148700/a810420b-66bb-4b5b-9a51-4963a2aac675)
 
 ## Features
